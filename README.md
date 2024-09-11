@@ -14,10 +14,18 @@ Contries : POST http://localhost:5000/api/countries  -> {"name": "France", "cont
 Cities: POST http://localhost:5000/api/cities -> {"name": "Paris", "country_id": 1}
 
 Read:
-Continent : GET http://localhost:5000/api/continents 
+Continent : GET http://localhost:5000/api/continents ,
 Contries : GET http://localhost:5000/api/countries  , 
-Cities: GET http://localhost:5000/api/countries/<country_id>/cities
+All cities: GET http://localhost:5000/api/cities ,
+Cities with country ID: GET http://localhost:5000/api/countries/<country_id>/cities
+
+
+Update:
+Continent : PUT http://localhost:5000/api/continents/<continent_ID>  -> {"name": "Updated Continent Name"}  ,
+Contries : PUT http://localhost:5000/api/countries/<country_ID> ->{"name": "updated country name"}  , 
+Cities: PUT http://localhost:5000/api/cities/<city_id>  -> {"name": "Updated City Name", "country_id": <country_id>}
 
 Delete:
 Continent : DELETE http://localhost:5000/api/continents/<id>
 Contries : DELETE http://localhost:5000/api/countries/<id>
+City: DELETE http://localhost:5000/api/cities/<id>
